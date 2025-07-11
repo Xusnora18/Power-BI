@@ -1,0 +1,52 @@
+1. What is Power BI, and what are its three main components?
+Power BI is a business analytics tool by Microsoft that allows users to visualize data and share
+insights. Its three main components are:
+- Power BI Desktop: A desktop application for building reports.
+- Power BI Service: A cloud-based platform for sharing and collaboration.
+- Power BI Mobile: A mobile app for accessing reports on the go.
+2. Name two business use cases for Power BI dashboards.
+- Sales analysis: Track revenue, order quantities, and employee performance.
+- Financial reporting: Monitor budget, expenses, profitability, and ROI.
+3. How do you download and install Power BI Desktop?
+1. Visit the official Microsoft Power BI website: https://powerbi.microsoft.com/
+2. Click 'Download Power BI Desktop'.
+3. Follow the installation instructions.
+4. What is the difference between Power BI Desktop and Power BI Service?
+- Power BI Desktop: A local app for creating and editing reports.
+- Power BI Service: A cloud platform for publishing, sharing, and collaborating on reports.
+5. What file extension does a Power BI project use?
+.pbix
+6. Explain the role of Power Query in Power BI.
+Power Query is used to load, clean, transform, and merge data before analysis.
+7. Why would a business prefer Power BI over Excel for reporting?
+- Interactive dashboards
+- Cloud integration
+- Real-time data updates
+- Better security and collaboration
+8. Describe one limitation of the free version of Power BI.
+You cannot share reports with others without a Power BI Pro license.
+9. What is a 'published report' in Power BI Service?
+A report uploaded from Power BI Desktop to the Power BI cloud, available for viewing and
+collaboration.
+10. How does Power BI Mobile enhance accessibility?
+- Access reports anytime, anywhere
+- Receive real-time alerts
+- Optimized interface for mobile devices
+11. Compare Power BI with Tableau-pros and cons.
+- Power BI: More affordable, better Microsoft integration, easier to learn
+- Tableau: Better performance with large datasets, more flexible visuals
+12. Explain how Power BI integrates with Azure services.
+- Stores data in Azure SQL or Data Lake
+- Uses Azure Machine Learning for predictions
+- Integrates with Azure Synapse for advanced analytics
+13. What are 'gateways' in Power BI, and when are they needed?
+A Data Gateway allows Power BI Service to connect to on-premises data sources. It-s needed when
+the data is not stored in the cloud.
+14. How would you convince a company to adopt Power BI? (ROI argument)
+Power BI automates reporting, speeds up decision-making, reduces manual effort, and provides
+real-time insights-leading to faster ROI.
+15. What security features does Power BI offer for sensitive data?
+- Row-Level Security (RLS)
+- Azure Active Directory integration
+- Data encryption
+- Activity audit logs
