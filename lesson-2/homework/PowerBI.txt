@@ -1,0 +1,19 @@
+1. Power BI can connect to Excel files, SQL databases, and Web APIs.
+2. The first step is to click on 'Get Data' in Power BI Desktop and select your data source.
+3. You refresh data by clicking on the 'Refresh' button on the Home tab.
+4. Power BI can import formats like CSV and Excel (XLSX).
+5. The 'Navigator' window shows available tables or sheets in the selected data source.
+6. In Navigator, check only the 'Product' and 'Price' columns before loading.
+7. Use Power Query Editor to change the data type of OrderDate to 'Date'.
+8. 'Load' brings the data into the model directly; 'Transform Data' opens Power Query to edit it first.
+9. One reason could be incorrect server name, credentials, or network issues.
+10. Go to 'Data Source Settings' and click 'Change Source'.
+11. let Source = Csv.Document(File.Contents("Sales_Data.csv"), ...), FilteredRows =
+Table.SelectRows(Source, each [Quantity] > 1)
+12. Use 'Data Source Settings' to point to the new CSV file path.
+13. Go to Power Query and change the column type to a consistent data type (e.g., all to text or
+number).
+14. Use 'Get Data' > 'SQL Server', enter parameters in the query string or use filters in Power
+Query.
+15. Use Power Automate to schedule data refreshes and send report summaries via email or
+Teams.
