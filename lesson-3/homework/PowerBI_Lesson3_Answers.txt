@@ -1,0 +1,17 @@
+Power BI Lesson 3 – Data Transformation (Answers)
+
+1. 'Applied Steps' shows each transformation step in Power Query.
+2. Use 'Remove Duplicates' from the Home tab to eliminate duplicate rows.
+3. The 'Filter' icon allows you to filter rows by values or conditions in a column.
+4. Right-click the column header and choose 'Rename' to change 'CustID' to 'CustomerID'.
+5. 'Close & Apply' saves changes and loads transformed data to Power BI model.
+6. Use Filter Rows to remove Quantity < 2.
+7. Use 'Split Column by Delimiter' or Date tools to extract Year, Month, Day from OrderDate.
+8. Use 'Replace Values' to replace 'Mouse' with 'Computer Mouse'.
+9. Sort the OrderDate column in descending order.
+10. Use 'Replace Values' or 'Fill Down' to handle nulls in Price column.
+11. M-code: = Table.AddColumn(#"Previous Step", "TotalSpent", each [Quantity] * [Price])
+12. Use 'Group By' CustID and aggregate TotalSpent using SUM.
+13. Use 'Change Type' or 'Using Locale' to fix inconsistent date formats.
+14. Add conditional column: if [Price] > 100 then 'High Value' else null.
+15. Remove unused columns early and disable 'Auto Date/Time' to optimize performance.
