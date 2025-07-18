@@ -1,0 +1,43 @@
+
+Answers for Lesson 4 – Power Query (Data Transformation – Part 2)
+
+1. What is the difference between Merge and Append?
+- Merge combines columns from two tables based on a matching key (like a SQL JOIN). Example: join Orders and Customers using CustomerID.
+- Append stacks tables vertically — it adds rows from one table to another. Example: combining Orders_Q1 with Orders_Q2.
+
+2. What is "Fill Down" used for in Power Query?
+- Fill Down takes the value from the row above and fills empty cells below in that column.
+- It’s useful when some rows have blank values and we want to copy down the last known value.
+
+3. What does "Pivot" and "Unpivot" mean?
+- Pivot: Converts rows into columns. Useful for summarizing data (like Excel PivotTable).
+- Unpivot: Converts columns into rows. Helps to normalize data structure for analysis.
+
+4. What is M Code in Power Query?
+- M Code is the scripting language behind Power Query transformations.
+- Every step in Power Query generates a line of M code.
+- You can view/edit it via: View → Advanced Editor.
+
+5. What are Conditional Columns in Power Query?
+- A Conditional Column lets you create new columns based on IF-THEN logic.
+- Example: If [Sales] > 1000 then "High" else "Low"
+
+6. What is "Group By" used for?
+- "Group By" is used to aggregate data — e.g., get the total quantity by customer or average sales per product.
+- You can perform actions like: Sum, Count, Average, Min, Max, etc.
+
+7. How do you extract domain from email in Power Query?
+- Use "Extract Text After Delimiter" with delimiter @.
+- It will return the part of the email after the @ symbol (e.g., example.com).
+
+8. What does "Promote Headers" do?
+- It changes the first row of data into column headers.
+- This is helpful when importing data that doesn't have proper headers.
+
+9. What does "Changed Type" mean in Applied Steps?
+- Power BI auto-detects column data types (text, number, date, etc.).
+- This step ensures each column has the correct data type for analysis.
+
+10. What is the function of “Advanced Editor”?
+- Shows the full M code for all query steps.
+- Useful for manually editing or copying query logic.
