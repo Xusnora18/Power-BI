@@ -1,0 +1,41 @@
+1. A primary key is a unique identifier for each row in a table. It ensures that each record can be uniquely identified.
+
+2. The two types of relationships in Power BI are:
+   - One-to-Many (1:*)
+   - Many-to-Many (*:*)
+
+3. In Power BI, you create a relationship by going to the "Model" view, dragging a field from one table to another, and defining the relationship type and cardinality.
+
+4. A "star schema" is a data model where a central fact table is connected to multiple dimension tables, forming a star-like structure.
+
+5. In a sales dataset, the Sales table is typically the fact table because it contains transactional data (quantities, dates, product IDs).
+
+6. To link Sales.csv to Customers.csv, use the CustomerID field:
+   - Set Customers[CustomerID] as the primary key (one side)
+   - Set Sales[CustomerID] as the foreign key (many side)
+
+7. ProductID in Sales.csv is a foreign key because it refers to a ProductID in the Products table, linking each sale to a specific product.
+
+8. If ProductID has mismatched data types (e.g., text in one table and number in another), change one of the column data types to match in Power Query or the model view.
+
+9. A star schema improves performance by reducing complexity in joins and improving query efficiency and DAX calculations.
+
+10. Add a new column in Sales: 
+    `TotalSales = Sales[Quantity] * RELATED(Products[Price])`
+
+11. Circular relationships can be resolved by removing one relationship or making one relationship inactive, then using DAX functions like USERELATIONSHIP when needed.
+
+12. To create a role-playing dimension, duplicate the Dates table and connect one to OrderDate and another to ShipDate.
+
+13. For a many-to-many relationship between Customers and Products, use a bridge table (e.g., CustomerProduct) with both CustomerID and ProductID.
+
+14. Bidirectional filtering should be used only when necessary—for example, when filtering from both dimensions is logically required, such as for slicers affecting both sides.
+
+15. DAX to enforce referential integrity:
+    ```
+    =IF (
+       ISBLANK( RELATED(Customers[CustomerID]) ),
+       "Deleted",
+       "Valid"
+    )
+    ```
