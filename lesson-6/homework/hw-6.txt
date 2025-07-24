@@ -1,0 +1,23 @@
+Lesson 6 – Power BI Theory Answers
+1. Name three types of visuals you can create in Power BI:
+You can create various types of visuals in Power BI, including:
+- Bar Chart
+- Line Chart
+- Pie Chart
+2. How do you add a slicer to a report?
+To add a slicer in Power BI:
+- Go to the Visualizations pane and select the 'Slicer' icon (it looks like a filter).
+- Drag a field (e.g., Quarter) into the slicer to filter data.
+3. What is the difference between a bar chart and a column chart?
+- A Bar Chart displays data with horizontal bars.
+- A Column Chart displays data with vertical columns.
+They are similar but oriented differently.
+4. How do you change the color of a visual background?
+To change the background color of a visual:
+- Click on the visual to select it.
+- Open the 'Format' pane (paint roller icon).
+- Expand the 'Background' section and choose a color.
+5. What does 'drill-down' mean in a visual?
+Drill-down allows users to explore data in more detail by navigating from high-level summary data to lower levels.
+For example: Region → Product → Quarter.
+You enable it by creating a hierarchy and using the drill-down buttons on the visual.
