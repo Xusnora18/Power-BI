@@ -1,0 +1,32 @@
+🔹 5. Purpose of the Data/Model View in Power BI:
+The "Model" view in Power BI allows users to manage relationships between tables, create calculated columns and measures, set data types, hide fields from report view, and optimize the data model for performance.
+
+🔹 10. Simulate sharing a report with a colleague:
+Go to https://app.powerbi.com.
+
+Open the published report.
+
+Click the “Share” button at the top-right.
+
+Enter your colleague’s email address.
+
+Optionally, write a message and choose permission settings.
+
+Click “Send.”
+
+🔹 13. Slicers not affecting all visuals — how to fix?
+There are several possible reasons:
+
+The slicer is not connected to all visuals (check Edit interactions).
+
+The visuals are using fields from unrelated tables (check relationships in the Model view).
+
+The slicer affects only certain visuals by design (check if Sync slicers is turned off).
+
+To fix this:
+
+Click on the slicer.
+
+Go to Format → Edit interactions, and make sure it filters the desired visuals.
+
+Check and fix relationships in the Model view if needed.
