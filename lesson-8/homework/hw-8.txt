@@ -1,0 +1,44 @@
+ 1. What does DAX stand for?
+DAX stands for Data Analysis Expressions.
+It is a formula language used in Power BI, Power Pivot, and SSAS to create custom calculations, aggregations, and filters on data models.
+
+ 3. What is the difference between a calculated column and a measure?
+Calculated Column:
+A column added to a table using a DAX formula. It is calculated row by row and stored in the data model. Example: Profit = Sales - Cost.
+
+Measure:
+A calculation that is evaluated on the fly, depending on the filter context (e.g., selected visuals, slicers). Measures are used mainly for aggregations like sums, averages, or percentages and are not stored as columns.
+
+Feature	Calculated Column	Measure
+Storage	Stored in the table	Stored in the model only
+Evaluation	Row context	Filter context
+Use case	Used like a regular column	Used in visuals for aggregations
+
+ 5. What does COUNTROWS() do in DAX?
+The COUNTROWS() function returns the number of rows in a table.
+Example:
+
+DAX
+Copy
+Edit
+COUNTROWS(Sales)
+This returns the total number of rows in the Sales table.
+
+ 9. What is a circular dependency error in a calculated column?
+A circular dependency error occurs when two or more calculated columns (or measures) refer to each other either directly or indirectly, creating a loop.
+
+This makes it impossible for Power BI to determine the order of calculation, and therefore the formula fails.
+
+10. Explain row context vs. filter context.
+Row Context:
+The context of a single row in a table, typically used in calculated columns. Within this context, the formula can refer to other columns in the same row.
+
+Filter Context:
+The context created by filters, slicers, visuals, or the CALCULATE() function. It defines which rows are included in an aggregation or measure.
+
+Example Difference:
+
+Profit = Sales - Cost in a column uses row context.
+
+SUM(Sales[Sales]) in a measure depends on the filter context (such as selected year or category).
+
