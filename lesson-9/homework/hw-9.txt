@@ -1,0 +1,29 @@
+1. What is row context? Give an example in a calculated column.
+Row context refers to the context in which DAX evaluates expressions row by row, typically in calculated columns.
+Example:
+
+TotalPrice = Sales[Quantity] * Sales[UnitPrice]
+
+2. Write a measure that finds total sales
+
+Total Sales = SUMX(Sales, Sales[Quantity] * Sales[UnitPrice])
+
+4. What does CALCULATE(SUM(Sales[Quantity]), Sales[Category] = "Electronics") return?
+It returns the total quantity sold for the Electronics category by applying a filter to the data.
+
+5. Explain the difference between VAR and RETURN in DAX.
+VAR is used to define a variable (temporary value or table).
+
+RETURN specifies what the expression should output using the variable.
+
+9. Fix this error: A calculated column in Sales uses RELATED(Customers[Region]) but returns blanks.
+Check if there is a relationship between Sales[CustomerID] and Customers[CustomerID]. If not, establish the relationship.
+
+10. Why does CALCULATE override existing filters?
+CALCULATE modifies the filter context. It can add new filters or override existing ones, allowing for more dynamic calculations.
+
+15. Troubleshoot: A CALCULATE measure ignores a slicer. What’s the likely cause?
+The measure uses ALL, REMOVEFILTERS, or similar, which remove slicer filters.
+
+The slicer field might not be connected through the data model (no relationship exists).
+
