@@ -1,0 +1,15 @@
+1. What does FILTER(Sales, Sales[Amount] > 1000) return?
+It returns a table containing only the rows from Sales where Amount > 1000.
+
+3. How does ALLEXCEPT(Sales, Sales[Region]) differ from ALL(Sales)?
+ALL(Sales) removes all filters from the Sales table.
+
+ALLEXCEPT(Sales, Sales[Region]) removes all filters except Region, keeping Region filter context.
+
+5. What is the purpose of ALLSELECTED?
+ALLSELECTED returns all values visible to the user, considering slicers and filters — useful in % of total calculations that respect slicers but ignore visual-level filters.
+
+14. Debug: A SWITCH measure returns incorrect values in a matrix visual.
+Likely reason: SWITCH depends on SELECTEDVALUE, which may return BLANK if multiple values are selected in matrix rows or columns.
+
+Fix: Add default fallback in SELECTEDVALUE(...).
