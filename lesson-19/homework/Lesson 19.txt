@@ -1,0 +1,74 @@
+Lesson 19 — Publishing & Sharing 
+
+1) Power BI Desktop vs. Power BI Service
+Desktop is the Windows authoring tool for data prep, modeling, and building reports.
+Service (PowerBI.com) is the cloud to publish, share, collaborate, schedule refresh, secure, and govern.
+
+2) How to publish from Desktop to the Service
+In Desktop: Home -> Publish (sign in) -> choose a workspace.
+Alternative: in the Service use Upload and select your .pbix.
+
+3) What is a workspace and its types
+A workspace is a container for content (reports, semantic models/datasets, dashboards, dataflows, etc.).
+Types: My workspace (personal) and collaborative workspaces (shared or Premium capacity). Roles: Admin, Member, Contributor, Viewer.
+
+4) Workspace vs. App
+Workspace = authoring and management area for creators.
+App = packaged, read-only, curated experience for consumers; it is published from a workspace.
+
+5) Licenses and key limits (high level)
+Free: personal use in My workspace; can view only if content is on Premium capacity.
+Pro: required to publish/share; consumers also need Pro unless content is on Premium.
+PPU: most Premium features per user; both author and consumer need PPU.
+Premium capacity (P1+): dedicated capacity, larger limits, up to 48 refreshes/day, enterprise features; allows free users to view content hosted there.
+
+6) How to share with someone who does not have Pro
+Host content on a Premium capacity and grant access (or publish an App from that Premium workspace).
+For offline distribution, export to PDF/PPT. Publish to web is public and not for private data.
+
+7) What is a semantic model (dataset) and where it lives
+The semantic model is the data model: tables, relationships, measures, RLS, etc.
+After publishing, it resides in the Service in the chosen workspace and can power multiple reports.
+
+8) Scheduled refresh
+Configure on the dataset in the Service: credentials/gateway (if on-prem), frequency/time windows, failure notifications.
+Pro: up to 8 refreshes/day. PPU/Premium: up to 48/day. Incremental refresh is supported when configured.
+
+9) Dataset vs. Dataflow
+Dataset: a ready semantic model used by reports.
+Dataflow: cloud Power Query in the Service for reusable ETL that multiple datasets can consume.
+
+10) When to use a dataflow instead of only a dataset
+When you want centralized, reusable transformations; standardize logic across teams; offload heavy prep; or enable upstream incremental patterns for many datasets.
+
+11) Dashboards vs. Reports
+Dashboard: single page of tiles in the Service; can combine visuals from multiple reports/sources; great for monitoring and real-time.
+Report: multi-page, interactive, usually built in Desktop from one semantic model.
+
+12) How to pin a visual to a dashboard
+In the Service, open the report -> on a visual click Pin -> choose dashboard (or use Pin live page to pin an entire page).
+
+13) Mobile view and why it matters
+A dedicated phone layout (portrait) so consumers have a clean mobile experience without changing the desktop layout.
+
+14) What is a paginated report and when to use it
+Pixel-perfect .RDL reports (Power BI Report Builder); best for invoices/statements, long tables, mass PDF export. Requires PPU or Premium to publish/use.
+
+15) Export to PDF/PowerPoint in the Service
+File -> Export -> PDF or PowerPoint (Current values), with permission to the report/dataset. Export has size/time limits.
+
+16) What does Live connection in the Service mean
+The report connects live to an existing semantic model (or SSAS via gateway) without importing data; calculations and security stay centralized.
+
+17) RLS (Row-Level Security) in the Service
+Define roles with DAX filters in Desktop or the Service. After publishing: Dataset -> Security -> assign users/groups to roles. Filters apply wherever that dataset is used.
+
+18) How to test RLS online
+Dataset -> Security -> Test as role (or use View as in Desktop) to see the report as a specific role/user.
+
+19) What are Apps and how to publish one
+Apps are curated packages of reports/dashboards from a single workspace with navigation and branding.
+In a workspace: Publish app -> choose content and target audiences -> publish and share the link. Update app to push changes.
+
+20) Key enterprise benefits of the Service
+Centralized access/control and governance, scalability with Premium, scheduled refresh and gateways, reusable dataflows and lineage/impact analysis, RLS and auditing/access management, deployment pipelines, alerts/metrics, mobile apps—reducing file sprawl and enabling a single source of truth.
